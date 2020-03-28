@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Transistemas Web</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+		<script src="js/transistemas.js"></script>
+	</head>
+	<body>
+		<header>
+			<a class="link-home" href="index.html">
+				<img class="logo-transistemas" src="img/logo-transistemas.svg" />
+			</a>
+			<!-- La siguiente línea, tiene en el atributo 'onclick' el llamado a la función que agrega o quita la clase 'hamburger-menu-active' al elemento body. La misma clase se utiliza para dar estilos en el CSS -->
+			<button class="hamburger-button" onclick="toggleHamburgerMenu()">
+				<img class="icon-hamburger" src="img/icon-hamburger.svg" />
+				<img class="icon-hamburger-close" src="img/icon-hamburger-close.svg" />
+			</button>
+			<ul class="link-container">
+				<li>
+					<a href="sobre-nosotres.html">Sobre nosotres</a>
+				</li>
+				<li>
+					<a href="cursos-2020.html">Cursos 2020</a>
+				</li>
+				<li>
+					<a href="colabora.html">Colaborá</a>
+				</li>
+				<li class="highlited-link-pink">
+					<a href="contactanos.html">Contactanos</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+			<h1>Somos transistemas</h1>
+			<p>Un espacio de formación en testing, programación y diseño para personas trans y no binaries. Nuestros talleres son gratuitos y se repiten durante el año.</p>
+			<div class="button-container">
+				<a class="button-link" href="inscripciones.html">Quiero inscribirme</a>
+				<a class="button-link" href="colaboraciones.html">Quiero colaborar</a>
+			</div>
+		</main>
+	</body>
+</html>

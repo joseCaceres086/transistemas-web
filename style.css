@@ -1,0 +1,193 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat';
+	text-decoration: none;
+	color: #202020;
+}
+
+a {
+	color: inherit;
+}
+
+button {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+	/* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
+	text-align: inherit;
+	outline: none;
+	border-radius: 0;
+}
+
+header {
+	height: 80px;
+}
+
+header .link-container,
+header .icon-hamburger-close {
+	display: none;
+}
+
+header .link-container {
+	list-style-type: none;
+	color: #4F4F4F;
+	font-weight: 600;
+}
+
+header .link-container li {
+	margin-bottom: 16px;
+}
+
+.highlited-link-pink {
+	color: #F4A7B7;
+}
+
+header .link-home {
+	padding: 16px;
+	display: block;
+	float: left;
+}
+
+header .hamburger-button {
+	float: right;
+	padding: 22px 16px;
+}
+
+main {
+	padding: 60px 32px;
+}
+
+h1 {
+	font-size: 32px;
+	margin-bottom: 16px;
+	line-height: 39px;
+}
+
+p {
+	font-size: 16px;
+	margin-bottom: 16px;
+	line-height: 27px;
+	color: #4F4F4F;
+}
+
+.button-container .button-link {
+	display: block;
+	margin: 24px auto;
+	width: 240px;
+	font-weight: 600;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 42px;
+}
+
+.button-container .button-link:nth-child(1) {
+	background: #F4A6B8;
+	border-radius: 10px;
+}
+
+.button-container .button-link:nth-child(2) {
+	background: #65C7EE;
+	border-radius: 10px;
+}
+
+/****************************************************************************************************
+ * Hasta acá están todos los estilos generales. Sirven tanto para mobile, como para tablet y desktop.
+ ****************************************************************************************************/
+
+@media (max-width: 758px) {
+	/* Los siguientes estilos son sólo para mobile y corresponden a la activación del menú hamburguesa. 
+	* Por eso todos comienzan con 'body.hamburger-menu-active'. Que significaría "aplicar al body cuando
+	* tenga la clase 'hamburger-menu-active'. Noten que no hay separación entre 'body' y el '.'
+	*/
+	body.hamburger-menu-active header .link-container {
+		display: block;
+		position: fixed;
+		width: calc(100% - 98px);
+		height: 100%;
+		top: 0;
+		right: 0;
+		text-align: right;
+		background: #FFFFFF;
+		opacity: 1;
+		padding: 90px 16px;
+	}
+	body.hamburger-menu-active header .hamburger-button {
+		z-index: 1;
+		position: fixed;
+		right: 0;
+	}
+	body.hamburger-menu-active header:before {
+		content: " ";
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #000000;
+		opacity: 0.8;
+	}
+	body.hamburger-menu-active .icon-hamburger-close {
+		display: block;
+	}
+	body.hamburger-menu-active .icon-hamburger {
+		display: none;
+	}
+}
+
+@media (min-width: 650px) {
+	/* Estilos intermedios */
+	.button-container {
+		text-align: center;
+	}
+	.button-container .button-link {
+		display: inline-block;
+		margin: 24px 20px;
+	}
+}
+
+@media (min-width: 759px) {
+	/* Estilos tablet y desktop */
+	.hamburger-button {
+		display: none;
+	}
+	header .link-container {
+		display: block;
+		float: right;
+		margin: 30px 24px 0 0;
+	}
+	header .link-container li {
+		display: inline-block;
+		font-size: 14px;
+		margin-left: 32px;
+	}
+	main {
+		margin: 0 auto;
+		max-width: 1024px;
+		padding-top: 106px;
+	}
+	h1 {
+		font-size: 58px;
+		line-height: 71px;
+	}
+	p {
+		font-size: 32px;
+		line-height: 55px;
+	}
+	.button-container .button-link {
+		line-height: 60px;
+		font-size: 24px;
+		width: 250px;
+	}
+}
